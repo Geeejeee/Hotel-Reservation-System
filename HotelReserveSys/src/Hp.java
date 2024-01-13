@@ -9,8 +9,6 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
@@ -98,9 +96,9 @@ public class Hp extends javax.swing.JFrame {
         jLabel25 = new javax.swing.JLabel();
         jComboBox2 = new javax.swing.JComboBox<>();
         jLabel28 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jTextField17 = new javax.swing.JTextField();
+        jComboBox6 = new javax.swing.JComboBox<>();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
@@ -139,7 +137,7 @@ public class Hp extends javax.swing.JFrame {
         jLabel54 = new javax.swing.JLabel();
         jComboBox4 = new javax.swing.JComboBox<>();
         jLabel57 = new javax.swing.JLabel();
-        jTextField16 = new javax.swing.JTextField();
+        jComboBox8 = new javax.swing.JComboBox<>();
         jPanel27 = new javax.swing.JPanel();
         jLabel51 = new javax.swing.JLabel();
         jComboBox7 = new javax.swing.JComboBox<>();
@@ -660,6 +658,12 @@ public class Hp extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel6.setText("Room Price:");
 
+        jComboBox6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox6ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
         jPanel16.setLayout(jPanel16Layout);
         jPanel16Layout.setHorizontalGroup(
@@ -684,8 +688,8 @@ public class Hp extends javax.swing.JFrame {
                         .addGap(90, 90, 90)
                         .addComponent(jLabel28))
                     .addGroup(jPanel16Layout.createSequentialGroup()
-                        .addGap(104, 104, 104)
-                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(117, 117, 117)
+                        .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(120, 120, 120)
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel16Layout.createSequentialGroup()
@@ -718,9 +722,9 @@ public class Hp extends javax.swing.JFrame {
                     .addComponent(jLabel28)
                     .addComponent(jLabel6))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
-                    .addComponent(jTextField17))
+                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(108, 108, 108))
         );
 
@@ -1075,6 +1079,11 @@ public class Hp extends javax.swing.JFrame {
         jLabel53.setText("Room Type:");
 
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Select--", "Economy", "Normal", "Deluxe", "VIP" }));
+        jComboBox3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox3ActionPerformed(evt);
+            }
+        });
 
         jLabel54.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel54.setText("Room Capacity:");
@@ -1097,18 +1106,18 @@ public class Hp extends javax.swing.JFrame {
                 .addGap(33, 33, 33)
                 .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel26Layout.createSequentialGroup()
-                        .addComponent(jLabel57)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel26Layout.createSequentialGroup()
                         .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jDateChooser4, javax.swing.GroupLayout.DEFAULT_SIZE, 307, Short.MAX_VALUE)
                             .addComponent(jComboBox3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jComboBox4, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(42, 42, 42))))
-            .addGroup(jPanel26Layout.createSequentialGroup()
-                .addGap(248, 248, 248)
-                .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(42, 42, 42))
+                    .addGroup(jPanel26Layout.createSequentialGroup()
+                        .addComponent(jLabel57)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel26Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jComboBox8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(246, 246, 246))
         );
         jPanel26Layout.setVerticalGroup(
             jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1125,11 +1134,11 @@ public class Hp extends javax.swing.JFrame {
                 .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jDateChooser4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel52))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
                 .addComponent(jLabel57)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(150, 150, 150))
+                .addComponent(jComboBox8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(167, 167, 167))
         );
 
         jPanel27.setBackground(new java.awt.Color(255, 255, 255));
@@ -1563,7 +1572,7 @@ public class Hp extends javax.swing.JFrame {
                     .addGroup(jPanel17Layout.createSequentialGroup()
                         .addComponent(jLabel35)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane7)))
+                        .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)))
                 .addContainerGap(26, Short.MAX_VALUE))
         );
 
@@ -1682,10 +1691,10 @@ public class Hp extends javax.swing.JFrame {
         String reserved_date = dFormat.format(jDateChooser4.getDate());
        
         DefaultTableModel info1 = (DefaultTableModel)jTable2.getModel();
-        info1.addRow(new Object[]{jTextField16.getText(),jComboBox3.getSelectedItem(),jComboBox4.getSelectedItem(),jTextField9.getText()+" "+jTextField10.getText(),jTextField11.getText(),jTextField12.getText(),
+        info1.addRow(new Object[]{jComboBox8.getSelectedItem(),jComboBox3.getSelectedItem(),jComboBox4.getSelectedItem(),jTextField9.getText()+" "+jTextField10.getText(),jTextField11.getText(),jTextField12.getText(),
                                     jTextField13.getText()+" "+jTextField14.getText()+" "+jTextField15.getText(),jComboBox7.getSelectedItem(),reserved_date});
         
-        JOptionPane.showMessageDialog(null, "Successfully Reserved!\n"+"Room Number: "+jTextField16.getText()+"\nRoom Type: "+jComboBox3.getSelectedItem()+
+        JOptionPane.showMessageDialog(null, "Successfully Reserved!\n"+"Room Number: "+jComboBox8.getSelectedItem()+"\nRoom Type: "+jComboBox3.getSelectedItem()+
                                         " ("+jComboBox4.getSelectedItem()+")"+"\nReserved Date: "+reserved_date);
     }//GEN-LAST:event_jButton12ActionPerformed
 
@@ -1698,11 +1707,11 @@ public class Hp extends javax.swing.JFrame {
         jTextField13.setText(" ");
         jTextField14.setText(" ");
         jTextField15.setText(" ");
-        jTextField16.setText(" ");
         jDateChooser4.setCalendar(null);
         jComboBox3.setSelectedIndex(0);
         jComboBox4.setSelectedIndex(0);
         jComboBox7.setSelectedIndex(0);
+        jComboBox8.setSelectedIndex(0);
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jTextField15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField15ActionPerformed
@@ -1742,17 +1751,17 @@ public class Hp extends javax.swing.JFrame {
         jTextField5.setText(" ");
         jTextField6.setText(" ");
         jTextField7.setText(" ");
-        jTextField8.setText(" ");
         jTextField17.setText(" ");
         jDateChooser1.setCalendar(null);
         jDateChooser2.setCalendar(null);
         jComboBox1.setSelectedIndex(0);
         jComboBox2.setSelectedIndex(0);
         jComboBox5.setSelectedIndex(0);        
+        jComboBox6.setSelectedIndex(0);
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here:    
         SimpleDateFormat dFormat = new SimpleDateFormat("yyyy-MM-dd");
         String check_in_date = dFormat.format(jDateChooser2.getDate());
         String check_out_date = dFormat.format(jDateChooser1.getDate());
@@ -1767,10 +1776,10 @@ public class Hp extends javax.swing.JFrame {
         
         
         DefaultTableModel info = (DefaultTableModel)jTable1.getModel();
-        info.addRow(new Object[]{jTextField8.getText(),jComboBox1.getSelectedItem(),jComboBox2.getSelectedItem(),jTextField2.getText() + " "+jTextField2.getText(),jTextField3.getText(),
+        info.addRow(new Object[]{jComboBox6.getSelectedItem(),jComboBox1.getSelectedItem(),jComboBox2.getSelectedItem(),jTextField1.getText() + " "+jTextField2.getText(),jTextField3.getText(),
                                     jTextField4.getText(), jTextField5.getText()+" "+jTextField6.getText()+" "+jTextField7.getText(),jComboBox5.getSelectedItem(),check_in_date,check_out_date,differenceInDays+" days","P"+total});
        
-        JOptionPane.showMessageDialog(null, "You are Checked-in!\n"+"Room Number: "+jTextField8.getText()+"\nTotal amount: P"+total+"\nRoom Type: "+jComboBox1.getSelectedItem()+
+        JOptionPane.showMessageDialog(null, "You are Checked-in!\n"+"Room Number: "+jComboBox6.getSelectedItem()+"\nTotal amount: P"+total+"\nRoom Type: "+jComboBox1.getSelectedItem()+
                                         " ("+jComboBox2.getSelectedItem()+")"+"\nCheck out Date: "+check_out_date);
     }//GEN-LAST:event_jButton7ActionPerformed
 
@@ -1809,6 +1818,53 @@ public class Hp extends javax.swing.JFrame {
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
+        if(jComboBox1.getSelectedItem().equals("Economy - (250)"))
+       {
+           jComboBox6.removeAllItems();
+           jComboBox6.setSelectedItem(null);
+           jComboBox6.addItem("--Select--");
+           jComboBox6.addItem("201");
+           jComboBox6.addItem("202");
+           jComboBox6.addItem("203");
+           jComboBox6.addItem("204");
+           jComboBox6.addItem("205");
+       }
+       else
+         if(jComboBox1.getSelectedItem().equals("Normal - (350)"))
+       {
+           jComboBox6.removeAllItems();
+           jComboBox6.setSelectedItem(null);
+           jComboBox6.addItem("--Select--");
+           jComboBox6.addItem("301");
+           jComboBox6.addItem("302");
+           jComboBox6.addItem("303");
+           jComboBox6.addItem("304");
+           jComboBox6.addItem("305");
+       }
+        else
+         if(jComboBox1.getSelectedItem().equals("Deluxe - (600)"))
+       {
+           jComboBox6.removeAllItems();
+           jComboBox6.setSelectedItem(null);
+           jComboBox6.addItem("--Select--");
+           jComboBox6.addItem("401");
+           jComboBox6.addItem("402");
+           jComboBox6.addItem("403");       
+           jComboBox6.addItem("404");
+           jComboBox6.addItem("405");
+       }
+        else
+         if(jComboBox1.getSelectedItem().equals("VIP - (1000)"))
+       {
+           jComboBox6.removeAllItems();
+           jComboBox6.setSelectedItem(null);
+           jComboBox6.addItem("--Select--");
+           jComboBox6.addItem("501");
+           jComboBox6.addItem("502");
+           jComboBox6.addItem("503");
+           jComboBox6.addItem("504");
+           jComboBox6.addItem("505");
+       }
        
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
@@ -1839,8 +1895,10 @@ public class Hp extends javax.swing.JFrame {
                 }
                 pw.println(String.join(",", row));
             }
+            JOptionPane.showMessageDialog(null, "Data Exported Succesfully!", "Export Successful", JOptionPane.INFORMATION_MESSAGE);
         } catch (IOException e) {
             e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Error exporting data: " + e.getMessage(), "Export Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_jButton13ActionPerformed
 
@@ -1872,7 +1930,9 @@ public class Hp extends javax.swing.JFrame {
                 }
                 pw.println(String.join(",", row));
             }
+                        JOptionPane.showMessageDialog(null, "Data Exported Succesfully!", "Export Successful", JOptionPane.INFORMATION_MESSAGE);
         } catch (IOException e) {
+            
             e.printStackTrace();
         }
     }//GEN-LAST:event_jButton15ActionPerformed
@@ -1888,8 +1948,65 @@ public class Hp extends javax.swing.JFrame {
             }
         } catch (IOException e) {
             e.printStackTrace();
+           JOptionPane.showMessageDialog(null, "Error exporting data: " + e.getMessage(), "Export Error", JOptionPane.ERROR_MESSAGE);
+
         }
     }//GEN-LAST:event_jButton16ActionPerformed
+
+    private void jComboBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox6ActionPerformed
+
+    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
+        // TODO add your handling code here:
+           if(jComboBox3.getSelectedItem().equals("Economy"))
+       {
+           jComboBox8.removeAllItems();
+           jComboBox8.setSelectedItem(null);
+           jComboBox8.addItem("--Select--");
+           jComboBox8.addItem("201");
+           jComboBox8.addItem("202");
+           jComboBox8.addItem("203");
+           jComboBox8.addItem("204");
+           jComboBox8.addItem("205");
+       }
+       else
+         if(jComboBox3.getSelectedItem().equals("Normal"))
+       {
+           jComboBox8.removeAllItems();
+           jComboBox8.setSelectedItem(null);
+           jComboBox8.addItem("--Select--");
+           jComboBox8.addItem("301");
+           jComboBox8.addItem("302");
+           jComboBox8.addItem("303");
+           jComboBox8.addItem("304");
+           jComboBox8.addItem("305");
+       }
+        else
+         if(jComboBox3.getSelectedItem().equals("Deluxe"))
+       {
+           jComboBox8.removeAllItems();
+           jComboBox8.setSelectedItem(null);
+           jComboBox8.addItem("--Select--");
+           jComboBox8.addItem("401");
+           jComboBox8.addItem("402");
+           jComboBox8.addItem("403");       
+           jComboBox8.addItem("404");
+           jComboBox8.addItem("405");
+       }
+        else
+         if(jComboBox3.getSelectedItem().equals("VIP"))
+       {
+           jComboBox8.removeAllItems();
+           jComboBox8.setSelectedItem(null);
+           jComboBox8.addItem("--Select--");
+           jComboBox8.addItem("501");
+           jComboBox8.addItem("502");
+           jComboBox8.addItem("503");
+           jComboBox8.addItem("504");
+           jComboBox8.addItem("505");
+       }
+    }//GEN-LAST:event_jComboBox3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1950,7 +2067,9 @@ public class Hp extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JComboBox<String> jComboBox5;
+    private javax.swing.JComboBox<String> jComboBox6;
     private javax.swing.JComboBox<String> jComboBox7;
+    private javax.swing.JComboBox<String> jComboBox8;
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private com.toedter.calendar.JDateChooser jDateChooser2;
     private com.toedter.calendar.JDateChooser jDateChooser4;
@@ -2057,7 +2176,6 @@ public class Hp extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField13;
     private javax.swing.JTextField jTextField14;
     private javax.swing.JTextField jTextField15;
-    private javax.swing.JTextField jTextField16;
     private javax.swing.JTextField jTextField17;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
@@ -2065,7 +2183,6 @@ public class Hp extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
     private javax.swing.JToggleButton jToggleButton1;
     // End of variables declaration//GEN-END:variables
